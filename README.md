@@ -1,7 +1,8 @@
 #TinyCore 17
 
 So this is a quick how to build tinycore as an iso. Using Rich's pre-made mutli version ISO from 15.x
-Step 1 download the latest kernel source. https://distro [.] ibiblio [.] org/tinycorelinux/17.x/x86/release/src/kernel/
+
+Step 1 download the latest kernel source. distro [.] ibiblio [.] org/tinycorelinux/17.x/x86/release/src/kernel/
 
 Step 2 extract tar ``-xvf linux- <version number> -patched.tar.xz``
 
@@ -15,7 +16,7 @@ Step 6 copy and rename bzImage under linux- <version number>/arch/x86/boot/bzIma
 
 
 Step 7 extract core.gz
-(Thankfully https://distro [.] ibiblio [.] org/tinycorelinux/17.x/x86/release/distribution_files/ has a nicely setup core.gz file. It's simple to extract and alter)
+(Thankfully distro [.] ibiblio [.] org/tinycorelinux/17.x/x86/release/distribution_files/ has a nicely setup core.gz file. It's simple to extract and alter)
 ```
 cp core.gz /tmp
 cd /tmp
@@ -35,4 +36,7 @@ Step 9 Replace core.gz with the one you just repacked MakeISO/ISO/V17/core.gz
 
 Step 10 build an iso from the MakeISO directory use bash ./MkISO
 
-If something goes wrong compare to the original ISO at ttps://distro [.] ibiblio [.] org/tinycorelinux/15.x/x86/TestISO/
+If something goes wrong compare to the original ISO at distro [.] ibiblio [.] org/tinycorelinux/15.x/x86/TestISO/
+
+##why?
+I just wanted to enjoy how tiny the kernel is before I bloat the system with a full C++ compiler and tooling (~200MB)

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# You will see this same value used in isolinux.cfg with the LABEL= boot codes.
+VolumeLabel="TC17"
+
+# Name of the new ISO file.
+Dest="TC17.iso"
+
+# Directory containing the contents to create the ISO file.
+Src="ISO"
+
+# This creates the ISO file. isolinux.bin must be writable for this to
+# succeed (chmod 600 isolinux.bin).
+mkisofs -pad -l -r -J -V "$VolumeLabel" -no-emul-boot -boot-load-size 4 \
+-boot-info-table -b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat \
+-hide-rr-moved -o "$Dest" "$Src"

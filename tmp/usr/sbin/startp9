@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+sudo insmod /lib/modules/6.18.2-tinycore/kernel/net/9p/9pnet_virtio.ko.gz
+sudo mount -t 9p -o trans=virtio,version=9p2000.L host9p /home/tc

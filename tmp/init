@@ -17,6 +17,4 @@ if mount -t tmpfs -o size=90% tmpfs /mnt; then
   fi
 fi
 
-#mkdir /mnt/9p
-#mount -t 9p -o trans=virtio,version=9p2000.L host9p /home/tce
 exec /sbin/init

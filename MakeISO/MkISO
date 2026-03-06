@@ -14,3 +14,7 @@ Src="ISO"
 mkisofs -pad -l -r -J -V "$VolumeLabel" -no-emul-boot -boot-load-size 4 \
 -boot-info-table -b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat \
 -hide-rr-moved -o "$Dest" "$Src"
+
+#mkisofs -pad -l -r -J -V "$VolumeLabel" -no-emul-boot -boot-load-size 4 \
+#-boot-info-table -b boot/isolinux/isolinux.bin -c boot/isolinux/boot.cat \
+#-hide-rr-moved -o "$Dest" "$Src"

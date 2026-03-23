@@ -1,0 +1,11 @@
+#list files -.dep -md5.txt to add to copy2fs and onboot 
+#my_array=(acl.tcz adwaita-icon-theme.tcz at-spi2-core.tcz attr.tcz bash.tcz binutils.tcz cairo.tcz coreutils.tcz dbus.tcz desktop-file-utils.tcz expat2.tcz fakeroot.tcz file.tcz flex.tcz fontconfig.tcz fribidi.tcz gamin.tcz gcc.tcz gcc_base-dev.tcz gcc_libs-dev.tcz gcc_libs.tcz gdk-pixbuf2-xlib.tcz gdk-pixbuf2.tcz geany.tcz glib2.tcz glibc_base-dev.tcz gmp.tcz graphite2.tcz gtk-update-icon-cache.tcz gtk2.tcz harfbuzz.tcz hicolor-icon-theme.tcz isl.tcz libX11-dev.tcz libXau-dev.tcz libXaw.tcz libXcomposite.tcz libXdamage.tcz libXdmcp-dev.tcz libXft.tcz libXi.tcz libXinerama.tcz libXpm.tcz libXrandr.tcz libXtst.tcz libcroco.tcz libffi.tcz liblzma.tcz librsvg.tcz libstartup-notification.tcz libtiff.tcz libxcb-dev.tcz libxml2.tcz libzstd.tcz linux-6.18_api_headers.tcz m4.tcz mpc.tcz mpfr.tcz nano.tcz ncursesw.tcz pango.tcz pcre.tcz pcre21042.tcz pixman.tcz readline.tcz setupdev.tcz shared-mime-info.tcz spacefm.tcz udev-lib.tcz util-linux.tcz util-macros.tcz xcb-proto.tcz xdg-utils.tcz xorg-proto.tcz xterm.tcz xtrans.tcz)
+
+#for x in  "${my_array[@]}"; do
+# rm "$x";
+#done
+
+for f in $(ls  -I "*.dep" -I "*.txt"); do
+  echo "$f";
+  # further processing
+done
